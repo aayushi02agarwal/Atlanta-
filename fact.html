@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facts about Atlanta</title>
+</head>
+<style>
+  body
+{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+  .backgroundtext{
+  text-align: center;
+  text-decoration-color: black;
+  text-shadow: ghostwhite;
+  font-size: 100px;
+  font-family: 'Times New Roman', Times, serif;
+  padding-top: 10px;
+  background-color: lightblue;
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+   align-items: center;
+}
+.factimg{
+  flex-basis: 40%;
+  height: 600px;
+  width: 300px;
+  padding-right: 5%;
+}
+.factsItem{
+  font-size: 20px;
+  flex-basis: 60%;
+  padding-right: 5%;
+}
+
+@media only screen and (max-width:700px){
+  .factimg{
+    display: none;
+  }
+  .factsItem{
+    flex-basis: 100%;
+  }
+  .backgroundtext{
+    font-size: 50px;
+  }
+}
+</style>
+
+
+<body>
+
+<div class="backgroundtext"> 
+    Facts About Atlanta
+  </div>
+
+<div class="container">
+  <img src="/icons/fact.jpg" class="factimg">
+  <ul class="factsItem">
+    <li>It is called "City in a forest"
+  Atlanta is home to 71 streets with a variation of the world "peachtree".</li><br>
+  <li>Many artist and musicians like Gucci Mane call Atlanta home.</li><br>
+  <li>Atlanta is the only city in North America to have been destroyed in the Civil war that have rebuilt itself from the ashes, hence the name the "Rising Phoenix.</li><br>
+  <li>The world's largest drive in resturant is in Atlanta and it is called The Varsity.</li><br>
+  <li>Atlanta has the busiest airport in the world which is the Hartsfield Jackson Atlanta Airport</li><br>
+  <li>Atlanta is the next hollywood and some of the well known films that are shot in Atlanta are Hunger games, Zombieland, The Vampire Dairy, and so on.</li><br>
+  <li>In terms of the largest concentration of Fortune 500 companies in the USA, the city of Atlanta ranks third.</li>
+  </ul>
+</div>
+
+<!-- <div class="pg">
+<p> Source:<a href= "https://cudoo.com/blog/10-interesting-facts-about-atlanta-ga/">Cudoo</a></p>
+</div> -->
+
+</body>
+</html>

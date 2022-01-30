@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>food spots</title>
+	<style>
+* {box-sizing: border-box;}
+body {
+font-family: Verdana, sans-serif;
+background: #CBC3E3;
+}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+.text-over-line2{
+   width: 100%; 
+   text-align: center; 
+   border-bottom: 1px solid gray; 
+   line-height: 0.1em;
+   margin: 10px 0 20px;
+   padding-top: 2%;
+}
+.text-over-line2 span{
+  background:#fff; 
+  padding:0 10px;
+  color: purple;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.textfood {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .textfood {font-size: 11px}
+}
+</style>
+</head>
+
+<body>
+   <h1 class="text-over-line2" id="section3"><span>Food</span></h1>
+
+   <div class="Food">
+     <p style="padding:2% 5% 2%">Atlanta is home to some of the best Southern food in the country, but that’s not all this city is known for. From BBQ joints, to authentic Italian pizza, to basic brunching, Atlanta has it all.</p>
+   </div>
+
+   <div class="lifestyle-gallery">
+     <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 7</div>
+            <img src="/gallery/chicken.jpg" class="lifestyleimg" style="width:100%">
+            <div class="textfood">Fried Chicken at Mary Mac's</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 7</div>
+            <img src="/gallery/hotdog.jpg" class="lifestyleimg" style="width:100%">
+            <div class="textfood">A Hotdog at the Varsity</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 7</div>
+            <img src="/gallery/rice.png" class="lifestyleimg" style="width:100%">
+            <div class="textfood">Spicy Tuna Crispy Rice at Umi</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 7</div>
+            <img src="/gallery/bagel.jpg" class="lifestyleimg" style="width:100%">
+            <div class="textfood">An Avenue A Bagel at the General Muir</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">5 / 7</div>
+            <img src="/gallery/pop.jpg" class="lifestyleimg" style="width:100%">
+            <div class="textfood">A popsicle at King of Pops</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">6 / 7</div>
+            <img src="/gallery/donught.png" class="lifestyleimg" style="width:100%">
+            <div class="textfood">Maple Bacon Cheddar Dounught at Sublime Donughts</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">7 / 7</div>
+            <img src="/gallery/pancake.jpg" class="lifestyleimg" style="width:100%">
+            <div class="textfood">Nutella Pancakes at Rise-n-Dine</div>
+          </div>
+   </div>
+    </div>
+</body>
+<br>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 4 seconds
+}
+</script>

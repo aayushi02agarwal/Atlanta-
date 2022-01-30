@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>festivals</title>
+	<style>
+* {box-sizing: border-box;}
+body {
+font-family: Verdana, sans-serif;
+background: #CBC3E3;
+}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+.text-over-line2{
+   width: 100%; 
+   text-align: center; 
+   border-bottom: 1px solid gray; 
+   line-height: 0.1em;
+   margin: 10px 0 20px;
+   padding-top: 2%;
+}
+.text-over-line2 span{
+  background:#fff; 
+  padding:0 10px;
+  color: purple;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.textfestivals {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .textfestivals {font-size: 11px}
+}
+</style>
+</head>
+
+<body>
+   <h1 class="text-over-line2" id="section3"><span>Festivals</span></h1>
+
+   <div class="Festivals">
+     <p style="padding:2% 5% 2%">Festivals in Atlanta range from high-energy dance parties and musical events to fine-art markets, family-friendly events, and cultural celebrations. Whether you’re interested in a low-key jazz performance on the lawn, a vibrant parade, or a weekend film festival, you’ll find it in Atlanta.
+Annual festivals can be found in Atlanta year-round, so there’s always something fun to do or see across the city–from springtime art and film festivals to summer music fests, Pride celebrations in autumn, and holiday parades in the winter.
+</p>
+   </div>
+
+   <div class="lifestyle-gallery">
+     <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 7</div>
+            <img src="/gallery/shaky.png" class="lifestyleimg" style="width:100%">
+            <div class="textfestivals">Shaky Knees Music Festival</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 7</div>
+            <img src="/gallery/jazz.png" class="lifestyleimg" style="width:100%">
+            <div class="textfestivals">Atlanta Jazz Festival</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 7</div>
+            <img src="/gallery/dogwood.png" class="lifestyleimg" style="width:100%">
+            <div class="textfestivals">Atlanta Dogwood Festival</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 7</div>
+            <img src="/gallery/sweetwater.png" class="lifestyleimg" style="width:100%">
+            <div class="textfestivals">SweetWater 420 Festival</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">5 / 7</div>
+            <img src="/gallery/film-festival.png" class="lifestyleimg" style="width:100%">
+            <div class="textfestivals">Atlanta Film Festival</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">6 / 7</div>
+            <img src="/gallery/art.png" class="lifestyleimg" style="width:100%">
+            <div class="textfestivals">Piedmont Park Arts Festival</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">7 / 7</div>
+            <img src="/gallery/pride.png" class="lifestyleimg" style="width:100%">
+            <div class="textfestivals">Atlanta Pride Festival</div>
+          </div>
+   </div>
+    </div>
+</body>
+<br>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 4 seconds
+}
+</script>
